@@ -1,0 +1,80 @@
+.s-social {
+  @include flex(column, center, center);
+  position: fixed;
+  top: 40%;
+  right: 0;
+  padding: 3.2rem 1.2rem;
+  border-radius: 20px 0 0 20px;
+  background-color: $brand-purple;
+  z-index: 50;
+
+  .social-media {
+    @include flex(column, center, center);
+    gap: 2.4rem;
+
+    a {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.s-hero {
+  padding: 8rem 0;
+  .container {
+    @include flex(column, flex-start, flex-start);
+    gap: 4rem;
+
+    .text-hero {
+      @include flex(column, flex-start, flex-start);
+      width: 100%;
+      max-width: 60rem;
+      gap: 2.4rem;
+
+      .tag {
+        font-size: 1.6rem;
+        font-weight: 300;
+        letter-spacing: 0.3rem;
+        color: $neutral-colors-white;
+        background-color: $brand-light-purple;
+        padding: 0.8rem 2.4rem;
+        border-radius: 50px;
+      }
+
+      h1 {
+        font-weight: 400;
+
+        span {
+          color: $brand-purple;
+        }
+      }
+
+      .bullets {
+        ul {
+          @include flex(column, flex-start, flex-start);
+          gap: 1.2rem;
+
+          li {
+            @include flex(row, center, center);
+            gap: 0.8rem;
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              border-radius: 50px;
+              background-color: $brand-purple;
+            }
+          }
+        }
+      }
+    }
+
+    .btns {
+      @include flex(row, center, flex-start);
+      gap: 2.4rem;
+    }
+  }
+}

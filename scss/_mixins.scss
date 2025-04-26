@@ -1,0 +1,102 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin responsive($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin typeface-1($size, $device: desktop) {
+  //H1
+  @if $size == h1 and $device == desktop {
+    font-size: 56px;
+    line-height: 100%;
+  } @else if $size == h1 and $device == mobile {
+    font-size: 48px;
+    line-height: 100%;
+  }
+
+  //H2
+  @else if $size == h2 and $device == desktop {
+    font-size: 56px;
+    line-height: 100%;
+  } @else if $size == h2 and $device == mobile {
+    font-size: 36px;
+    line-height: 100%;
+  }
+
+  //H3
+  @else if $size == h3 and $device == desktop {
+    font-size: 48px;
+    line-height: 100%;
+  } @else if $size == h3 and $device == mobile {
+    font-size: 24px;
+    line-height: 100%;
+  }
+}
+
+@mixin typeface-2($size: p2, $device: desktop) {
+  //P1
+  @if $size == p1 and $device == desktop {
+    font-size: 18px;
+    line-height: 100%;
+  } @else if $size == p1 and $device == mobile {
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  //P2
+  @else if $size == p2 and $device == desktop {
+    font-size: 16px;
+    line-height: 100%;
+  } @else if $size == p2 and $device == mobile {
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  //P3
+  @else if $size == p3 and $device == desktop {
+    font-size: 13px;
+    line-height: 100%;
+  } @else if $size == p3 and $device == mobile {
+    font-size: 13px;
+    line-height: 100%;
+  }
+}
+
+h1 {
+  color: $neutral-colors-black;
+  @include typeface-1(h1, desktop);
+  @include responsive(s) {
+    @include typeface-1(h1, mobile);
+  }
+}
+
+h2 {
+  color: $neutral-colors-black;
+  @include typeface-1(h2, desktop);
+  @include responsive(s) {
+    @include typeface-1(h2, mobile);
+  }
+}
+
+h3 {
+  color: $neutral-colors-black;
+  @include typeface-1(h3, desktop);
+  @include responsive(s) {
+    @include typeface-1(h3, mobile);
+  }
+}
+
+p {
+  color: $neutral-colors-gray;
+  @include typeface-2(p2, desktop);
+  @include responsive(s) {
+    @include typeface-1(p2, mobile);
+  }
+}

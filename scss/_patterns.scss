@@ -1,0 +1,10 @@
+.btn {
+  background-color: $neutral-colors-black;
+  border: 1px solid $neutral-colors-black;
+  padding: 1.2rem;
+  span {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $gray-100;
+  }
+}

@@ -1,0 +1,57 @@
+header {
+  display: flex;
+  width: 100%;
+  height: 12rem;
+  .container {
+    @include flex(row, center, space-between);
+    padding-right: 0;
+  }
+
+  .logo {
+    img {
+      width: 100%;
+      max-width: 96px;
+      height: auto;
+    }
+  }
+
+  .menu {
+    ul {
+      @include flex(row, center, space-between);
+      gap: 2.4rem;
+
+      li {
+        a {
+          font-size: 1.8rem;
+          font-weight: 500;
+          color: $brand-purple;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $brand-light-purple;
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    @include flex(row, center, center);
+    gap: 2rem;
+    padding: 1.2rem 4rem 1.2rem 1.2rem;
+    border-radius: 50px 0px 0px 50px;
+    background-color: $brand-purple;
+
+    img {
+      width: 100%;
+      max-width: 4rem;
+      height: auto;
+    }
+
+    span {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $gray-100;
+    }
+  }
+}
