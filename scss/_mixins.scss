@@ -82,10 +82,10 @@
   //P2
   @else if $size == p2 and $device == desktop {
     font-size: 16px;
-    line-height: 100%;
+    line-height: 130%;
   } @else if $size == p2 and $device == mobile {
     font-size: 16px;
-    line-height: 100%;
+    line-height: 115%;
   }
 
   //P3
@@ -94,7 +94,7 @@
     line-height: 100%;
   } @else if $size == p3 and $device == mobile {
     font-size: 13px;
-    line-height: 100%;
+    line-height: 115%;
   }
 }
 

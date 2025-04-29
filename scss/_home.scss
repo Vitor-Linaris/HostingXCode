@@ -357,3 +357,37 @@
     z-index: -1;
   }
 }
+
+.s-shared-hosting {
+  padding: 11.2rem 0;
+
+  .container {
+    position: relative;
+    @include flex(row, center, space-between);
+  }
+
+  .img-shared-hosting {
+    width: 100%;
+    max-width: 498px;
+  }
+
+  .text-shared {
+    @include flex(column, center, center);
+    width: 100%;
+    max-width: 60rem;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    h3 {
+      text-align: center;
+      color: $brand-dark-purple;
+    }
+
+    p {
+      width: 100%;
+      max-width: 60rem;
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+}
