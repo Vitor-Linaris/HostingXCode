@@ -374,11 +374,11 @@
   .text-shared {
     @include flex(column, center, center);
     width: 100%;
-    max-width: 60rem;
+    max-width: 65rem;
     gap: 2.4rem;
     flex-wrap: wrap;
 
-    h3 {
+    h2 {
       text-align: center;
       color: $brand-dark-purple;
     }
@@ -388,6 +388,110 @@
       max-width: 60rem;
       text-align: center;
       font-size: 24px;
+      color: $gray-300;
+    }
+  }
+}
+
+.s-wp-hosting {
+  padding: 11.2rem 0;
+
+  .container {
+    position: relative;
+    @include flex(row, center, space-between);
+  }
+
+  .text-wp {
+    @include flex(column, flex-start, center);
+    width: 100%;
+    max-width: 60rem;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    h2 {
+      width: 100%;
+      max-width: 3rem;
+      color: $brand-dark-purple;
+    }
+
+    p {
+      width: 100%;
+      max-width: 45rem;
+      font-size: 24px;
+      color: $neutral-colors-black;
+    }
+
+    .wp-bullets {
+      @include flex(column, flex-start, center);
+      gap: 1rem;
+
+      li {
+        width: 90%;
+        @include flex(row, flex-start, center);
+        gap: 0.8rem;
+        p {
+          font-size: 1.8rem;
+          color: $gray-300;
+          font-weight: 500;
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50px;
+          background-color: $brand-purple;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  .wp-imgs {
+    @include flex(column, center, center);
+
+    .img-wp-hosting-1 {
+      width: 100%;
+      max-width: 598px;
+    }
+
+    .img-wp-hosting-2 {
+      width: 100%;
+      max-width: 252px;
+    }
+  }
+}
+
+.s-aws-hosting {
+  padding: 11.2rem 0;
+
+  .container {
+    position: relative;
+    @include flex(row, center, space-between);
+  }
+
+  .img-aws-hosting {
+    width: 100%;
+    max-width: 498px;
+  }
+
+  .text-aws {
+    @include flex(column, flex-start, center);
+    width: 100%;
+    max-width: 60rem;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    h2 {
+      color: $brand-dark-purple;
+    }
+
+    p {
+      width: 100%;
+      max-width: 60rem;
+      font-size: 24px;
+      color: $gray-300;
     }
   }
 }
