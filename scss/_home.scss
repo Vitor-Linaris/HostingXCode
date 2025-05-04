@@ -359,7 +359,7 @@
 }
 
 .s-shared-hosting {
-  padding: 11.2rem 0;
+  padding: 8rem 0;
 
   .container {
     position: relative;
@@ -404,7 +404,7 @@
 }
 
 .s-wp-hosting {
-  padding: 11.2rem 0;
+  padding: 8rem 0;
 
   .container {
     position: relative;
@@ -484,7 +484,7 @@
 }
 
 .s-aws-hosting {
-  padding: 11.2rem 0;
+  padding: 8rem 0;
 
   .container {
     position: relative;
@@ -553,7 +553,7 @@
 }
 
 .s-marketing-agency {
-  padding: 11.2rem 0;
+  padding: 8rem 0;
 
   .container {
     position: relative;
@@ -662,7 +662,7 @@
 }
 
 .s-data-center {
-  padding: 11.2rem 0;
+  padding: 8rem 0;
 
   .title-data-center {
     @include flex(column, center, center);
@@ -817,7 +817,7 @@
 
   .data-center-aws-xcloud {
     @include flex(column, center, center);
-    margin: 11.2rem 0;
+    margin: 11.2rem 0 0 0;
     h2 {
       text-align: center;
       color: $brand-dark-purple;
@@ -851,6 +851,56 @@
             font-weight: 300;
             color: $neutral-colors-black;
           }
+        }
+      }
+    }
+  }
+}
+
+.s-complete-solution {
+  padding: 8rem 0;
+
+  .container {
+    @include flex(column, center, space-between);
+    gap: 1.6rem;
+  }
+
+  h2 {
+    color: $brand-dark-purple;
+  }
+
+  p {
+    width: 100%;
+    max-width: 98rem;
+    font-size: 2rem;
+    color: $gray-300;
+    text-align: center;
+  }
+
+  .cards-solution {
+    margin-top: 4rem;
+    @include flex(row, center, space-between);
+    gap: 3.2rem;
+    .card-solution {
+      @include flex(column, center, center);
+      width: 100%;
+      max-width: 348px;
+      gap: 2.4rem;
+      padding: 3.2rem;
+      border-radius: 24px;
+      background-color: #fff;
+      box-shadow: 5px 12px 20.4px 0px rgba(0, 0, 0, 0.5);
+
+      .text-card-solution {
+        @include flex(column, center, center);
+        gap: 1.6rem;
+        width: 100%;
+        max-width: 40rem;
+        text-align: center;
+
+        p {
+          font-size: 1.6rem;
+          color: $gray-300;
         }
       }
     }
