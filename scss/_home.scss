@@ -906,3 +906,50 @@
     }
   }
 }
+
+.s-suport {
+  padding: 8rem 0;
+
+  .container {
+    position: relative;
+    @include flex(row, center, space-between);
+  }
+
+  .text-suport {
+    @include flex(column, center, center);
+    width: 100%;
+    max-width: 65rem;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    .title-suport {
+      @include flex(column, center, center);
+      h2 {
+        text-align: center;
+        color: $brand-dark-purple;
+      }
+
+      span {
+        width: 100%;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: $brand-dark-purple;
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      width: 100%;
+      max-width: 60rem;
+      text-align: center;
+      font-size: 18px;
+      color: $gray-300;
+    }
+  }
+
+  .img-shared-hosting {
+    width: 100%;
+    max-width: 560px;
+  }
+}
