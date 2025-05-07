@@ -3,4 +3,8 @@
   max-width: 138.6rem;
   padding: 0 15px;
   margin: 0 auto;
+
+  @include responsive(640px) {
+    padding: 0 0.8rem;
+  }
 }

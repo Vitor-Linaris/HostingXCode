@@ -14,8 +14,18 @@
 
     a {
       img {
-        width: 100%;
+        width: 3.2rem;
         height: auto;
+      }
+    }
+  }
+
+  @include responsive(640px) {
+    .social-media {
+      a {
+        img {
+          width: 2.8rem;
+        }
       }
     }
   }
@@ -27,8 +37,8 @@
   .container {
     position: relative;
     @include flex(row, flex-start, space-between);
-    gap: 3.2rem;
     flex-wrap: wrap;
+    gap: 1.6rem;
   }
 
   .content {
@@ -38,7 +48,7 @@
     .text-hero {
       @include flex(column, flex-start, flex-start);
       width: 100%;
-      max-width: 60rem;
+      max-width: 47.2rem;
       gap: 2.4rem;
 
       .tag {
@@ -188,6 +198,160 @@
     top: 400px;
     left: 35%;
     z-index: -1;
+  }
+
+  @include responsive(1024px) {
+    .img-hero {
+      img {
+        max-width: 210px;
+
+        &.img-hero-2 {
+          position: relative;
+          top: -80px;
+          bottom: 0;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    padding: 8rem 0;
+    .container {
+      @include flex(row, center, space-between);
+      gap: 4rem;
+    }
+
+    .content {
+      @include flex(column, center, center);
+
+      .text-hero {
+        @include flex(column, center, center);
+        width: 100%;
+        max-width: 80rem;
+
+        h1 {
+          text-align: center;
+        }
+      }
+    }
+
+    .img-hero {
+      width: 100%;
+      @include flex(row, flex-start, center);
+      gap: 2.4rem;
+
+      img {
+        width: 100%;
+        max-width: 25rem;
+        height: auto;
+
+        &.img-hero-1 {
+          position: relative;
+          top: 60px;
+        }
+        &.img-hero-2 {
+          position: relative;
+          top: 0px;
+          z-index: 1;
+        }
+      }
+    }
+
+    .h-circle-lg {
+      position: absolute;
+      top: -500px;
+      left: -27%;
+      z-index: -1;
+    }
+
+    .h-disc-purple-sm {
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 38%;
+      z-index: -1;
+    }
+
+    .h-element-x-purple {
+      display: none;
+      position: absolute;
+      top: 235px;
+      left: 42%;
+      z-index: -1;
+    }
+
+    .h-bullets-group-vertical {
+      position: absolute;
+      top: -20px;
+      left: 82%;
+      z-index: -1;
+    }
+
+    .h-line-circle-purple {
+      position: absolute;
+      top: 260px;
+      left: 80.5%;
+      z-index: -1;
+    }
+
+    .h-element-x-right {
+      position: absolute;
+      top: -100px;
+      left: 70%;
+      z-index: -1;
+    }
+
+    .h-bullets-group-horizontal {
+      position: absolute;
+      bottom: -30px;
+      right: 0;
+      z-index: -1;
+    }
+
+    .h-disc-purple-lg {
+      display: none;
+      position: absolute;
+      bottom: -200px;
+      right: -15%;
+      z-index: -1;
+    }
+
+    .h-line-lg {
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      z-index: -1;
+    }
+
+    .h-3d-fluency-wordpress {
+      display: none;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 400px;
+      left: 42%;
+      z-index: -1;
+    }
+
+    .h-aws {
+      display: none;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 400px;
+      left: 35%;
+      z-index: -1;
+    }
+  }
+
+  @include responsive(640px) {
+    .img-hero {
+      img {
+        width: 100%;
+        max-width: 19rem;
+      }
+    }
   }
 }
 
@@ -356,6 +520,24 @@
     right: -22%;
     z-index: -1;
   }
+
+  @include responsive(768px) {
+    padding: 8rem 0;
+
+    .text-price {
+      @include flex(column, center, center);
+
+      h2 {
+        text-align: center;
+        color: $brand-dark-purple;
+      }
+    }
+
+    .cards {
+      margin-top: 5.6rem;
+      @include flex(row, flex-start, center);
+    }
+  }
 }
 
 .s-shared-hosting {
@@ -364,6 +546,7 @@
   .container {
     position: relative;
     @include flex(row, center, space-between);
+    gap: 1.6rem;
   }
 
   .img-shared-hosting {
@@ -399,6 +582,13 @@
       text-align: center;
       font-size: 24px;
       color: $gray-300;
+    }
+  }
+
+  @include responsive(768px) {
+    .container {
+      @include flex(column, center, space-between);
+      gap: 4rem;
     }
   }
 }
@@ -481,6 +671,61 @@
       max-width: 252px;
     }
   }
+
+  @include responsive(768px) {
+    .container {
+      @include flex(column-reverse, center, space-between);
+      gap: 4rem;
+    }
+
+    .text-wp {
+      @include flex(column, center, center);
+
+      h2 {
+        @include flex(column, center, center);
+        text-align: center;
+        max-width: fit-content;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 180px;
+          height: 2px;
+          background-color: $brand-dark-purple;
+          margin-top: 1.6rem;
+        }
+      }
+
+      p {
+        text-align: center;
+        max-width: 60rem;
+      }
+
+      .wp-bullets {
+        @include flex(column, flex-start, center);
+        gap: 1rem;
+
+        li {
+          width: 90%;
+          @include flex(row, flex-start, center);
+          gap: 0.8rem;
+          p {
+            text-align: left;
+          }
+
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background-color: $brand-purple;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .s-aws-hosting {
@@ -489,6 +734,7 @@
   .container {
     position: relative;
     @include flex(row, center, space-between);
+    gap: 2.4rem;
   }
 
   .img-aws-hosting {
@@ -546,6 +792,46 @@
           border-radius: 50px;
           background-color: $brand-purple;
           margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .container {
+      @include flex(column, center, space-between);
+    }
+
+    .text-aws {
+      @include flex(column, center, center);
+
+      h2 {
+        @include flex(column, center, center);
+        text-align: center;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 180px;
+          height: 2px;
+          background-color: $brand-dark-purple;
+          margin-top: 1.6rem;
+        }
+      }
+
+      p {
+        text-align: center;
+        width: 100%;
+        max-width: 60rem;
+        font-size: 24px;
+        color: $gray-300;
+      }
+
+      .aws-bullets {
+        li {
+          p {
+            text-align: start;
+          }
         }
       }
     }
@@ -614,9 +900,37 @@
     width: 100%;
     max-width: 648px;
   }
+
+  @include responsive(1024px) {
+    .img-marketing {
+      max-width: 530px;
+    }
+  }
+
+  @include responsive(768px) {
+    .container {
+      @include flex(column-reverse, center, space-between);
+      gap: 4rem;
+    }
+
+    .text-marketing {
+      @include flex(column, center, center);
+      width: 100%;
+      max-width: 60rem;
+      gap: 2.4rem;
+      flex-wrap: wrap;
+
+      h2 {
+        @include flex(column, center, center);
+        text-align: center;
+        max-width: 60rem;
+      }
+    }
+  }
 }
 
 .s-region {
+  padding-bottom: 4rem;
   .container {
     @include flex(row, flex-start, space-between);
   }
@@ -657,6 +971,33 @@
     .btn-primary {
       width: 100%;
       max-width: fit-content;
+    }
+  }
+
+  @include responsive(640px) {
+    .container {
+      @include flex(column, center, space-between);
+      gap: 2.4rem;
+    }
+
+    .left-content {
+      @include flex(column, center, center);
+    }
+
+    .right-content {
+      @include flex(column, center, center);
+
+      p {
+        text-align: center;
+        font-size: 2rem;
+        color: $neutral-colors-black;
+        margin-bottom: 1.6rem;
+      }
+
+      .btn-primary {
+        width: 100%;
+        max-width: fit-content;
+      }
     }
   }
 }
@@ -855,6 +1196,28 @@
       }
     }
   }
+
+  @include responsive(640px) {
+    .data-center-xcloud {
+      margin: 8rem 0;
+
+      .row-tags-local {
+        margin: 3.2rem 0;
+        @include flex(column, center, center);
+        gap: 2.4rem;
+      }
+    }
+
+    .data-center-aws-xcloud {
+      @include flex(column, center, center);
+      margin: 8rem 0 0 0;
+
+      .row-tags-local {
+        margin: 3.2rem 0;
+        @include flex(column, center, center);
+      }
+    }
+  }
 }
 
 .s-complete-solution {
@@ -879,17 +1242,45 @@
 
   .cards-solution {
     margin-top: 4rem;
-    @include flex(row, center, space-between);
+    @include flex(row, stretch, center);
     gap: 3.2rem;
+    flex-wrap: wrap;
     .card-solution {
-      @include flex(column, center, center);
+      @include flex(column, center, flex-start);
       width: 100%;
-      max-width: 348px;
+      max-width: 304px;
       gap: 2.4rem;
       padding: 3.2rem;
       border-radius: 24px;
-      background-color: #fff;
+      background-color: $neutral-colors-white;
       box-shadow: 5px 12px 20.4px 0px rgba(0, 0, 0, 0.5);
+
+      .icon-solution {
+        @include flex(row, center, center);
+        padding: 1.8rem;
+        border-radius: 50px;
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      .icon-google {
+        background-color: #f3f3f3;
+      }
+
+      .icon-config {
+        background-color: #7690d9;
+      }
+
+      .icon-build {
+        background-color: #9be09d;
+      }
+
+      .icon-painel {
+        background-color: #f47474;
+      }
 
       .text-card-solution {
         @include flex(column, center, center);
@@ -903,6 +1294,12 @@
           color: $gray-300;
         }
       }
+    }
+  }
+
+  @include responsive(768px) {
+    h2 {
+      text-align: center;
     }
   }
 }
