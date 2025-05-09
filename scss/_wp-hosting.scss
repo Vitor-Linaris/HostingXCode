@@ -266,3 +266,75 @@
     }
   }
 }
+
+.s-advantage {
+  padding: 8rem 0;
+
+  .container {
+    @include flex(column, center, center);
+    gap: 4rem;
+  }
+
+  .title-advantage {
+    h2 {
+      text-align: center;
+      color: $brand-dark-purple;
+    }
+  }
+
+  .card-advantage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3.2rem;
+
+    .card-advantage-item {
+      &:nth-child(1) {
+        margin-top: 4rem;
+      }
+      &:nth-child(3) {
+        margin-top: 4rem;
+      }
+    }
+
+    .img-advantage {
+      img {
+        width: 100%;
+      }
+    }
+
+    p {
+      margin-top: 3.2rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  // Breakpoint para telas médias (tablets e dispositivos menores)
+  @include responsive(1024px) {
+    .card-advantage {
+      grid-template-columns: repeat(2, 1fr);
+
+      .card-advantage-item {
+        &:nth-child(1) {
+          margin-top: 0rem;
+        }
+        &:nth-child(3) {
+          margin-top: 0rem;
+        }
+      }
+
+      /*       .img-advantage {
+        img {
+          width: 392px;
+          height: 392px;
+        }
+      } */
+    }
+  }
+
+  // Breakpoint para telas pequenas (smartphones)
+  @include responsive(768px) {
+    .card-advantage {
+      grid-template-columns: 1fr;
+    }
+  }
+}
