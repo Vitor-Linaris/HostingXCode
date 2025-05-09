@@ -370,94 +370,6 @@
     }
   }
 
-  .cards {
-    margin-top: 8rem;
-    @include flex(row, flex-start, space-between);
-    gap: 3.2rem;
-    flex-wrap: wrap;
-
-    .card {
-      width: 100%;
-      max-width: 384px;
-      @include flex(column, center, center);
-      gap: 1.6rem;
-      padding: 2.4rem 3.2rem;
-
-      border-radius: 40px;
-      box-shadow: 5px 12px 20.4px 0px rgba(0, 0, 0, 0.8);
-      background-color: $neutral-colors-white;
-      z-index: 4;
-
-      .imgs-price {
-        @include flex(row, center, center);
-        gap: 0.8rem;
-      }
-
-      .penta {
-        width: 132px;
-        height: auto;
-      }
-
-      .card-header {
-        @include flex(column, center, flex-start);
-        gap: 1.6rem;
-
-        .price {
-          display: flex;
-          align-items: flex-start;
-          gap: 0.8rem;
-          line-height: 1;
-
-          .currency {
-            font-size: 14px;
-          }
-
-          .amount {
-            font-size: 64px;
-            font-weight: 500;
-            line-height: 80%;
-          }
-
-          .bottom {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 2px;
-
-            .cents {
-              font-size: 14px;
-            }
-
-            .per-month {
-              font-size: 12px;
-            }
-          }
-        }
-      }
-
-      .card-body {
-        ul {
-          @include flex(column, flex-start, center);
-          gap: 1.6rem;
-
-          li {
-            @include flex(row, center, center);
-            gap: 0.8rem;
-
-            p {
-              color: $neutral-colors-black;
-              font-weight: 500;
-            }
-          }
-        }
-      }
-
-      .btn-primary {
-        margin-top: 1.6rem;
-      }
-    }
-  }
-
   .price-circle-lg {
     position: absolute;
     top: 10%;
@@ -531,11 +443,6 @@
         text-align: center;
         color: $brand-dark-purple;
       }
-    }
-
-    .cards {
-      margin-top: 5.6rem;
-      @include flex(row, flex-start, center);
     }
   }
 }
