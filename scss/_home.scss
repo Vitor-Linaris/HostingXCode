@@ -1224,6 +1224,7 @@
   padding: 8rem 0;
 
   .container {
+    position: relative;
     @include flex(column, center, space-between);
     gap: 1.6rem;
   }
@@ -1310,6 +1311,7 @@
   .container {
     position: relative;
     @include flex(row, center, space-between);
+    gap: 1.6rem;
   }
 
   .text-suport {
@@ -1348,5 +1350,18 @@
   .img-shared-hosting {
     width: 100%;
     max-width: 560px;
+  }
+
+  @include responsive(1024px) {
+    .img-shared-hosting {
+      max-width: 480px;
+    }
+  }
+
+  @include responsive(768px) {
+    .container {
+      @include flex(column, center, space-between);
+      gap: 3.2rem;
+    }
   }
 }

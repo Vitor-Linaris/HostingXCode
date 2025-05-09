@@ -46,3 +46,11 @@
     }
   }
 }
+
+.element {
+  position: absolute;
+
+  @include responsive(640px) {
+    display: none;
+  }
+}

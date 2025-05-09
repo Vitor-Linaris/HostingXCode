@@ -82,4 +82,20 @@
       color: $gray-100;
     }
   }
+
+  @include responsive(768px) {
+    .footer-top {
+      @include flex(row, flex-start, flex-start);
+      gap: 2rem;
+
+      h2 {
+        width: 100%;
+        max-width: 45rem;
+      }
+    }
+
+    .footer-content {
+      flex-wrap: wrap;
+    }
+  }
 }
