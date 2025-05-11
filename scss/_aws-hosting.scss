@@ -1,0 +1,340 @@
+.s-hero-aws-hosting {
+  padding: 8rem 0;
+  .container {
+    @include flex(column, center, center);
+  }
+
+  .title-hero {
+    @include flex(column, center, center);
+    gap: 1.2rem;
+
+    h2 {
+      text-align: center;
+      color: $brand-dark-purple;
+    }
+
+    p {
+      text-align: center;
+      font-size: 2.4rem;
+    }
+  }
+
+  .cards {
+    @include flex(row, center, center);
+  }
+
+  .text-price-hero {
+    @include flex(column, flex-start, flex-start);
+    h3 {
+      margin-bottom: 2.4rem;
+    }
+    ul {
+      @include flex(column, flex-start, flex-start);
+      gap: 1.6rem;
+      li {
+        @include flex(row, center, flex-start);
+        gap: 0.8rem;
+
+        p {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .text-price-hero {
+      @include flex(column, center, flex-start);
+    }
+  }
+}
+
+.s-suport-aws {
+  padding: 8rem 0;
+  .container {
+    position: relative;
+    @include flex(row, center, space-between);
+    gap: 2.4rem;
+  }
+
+  .img-security-hosting {
+    width: 100%;
+    max-width: 524px;
+  }
+
+  .text-security {
+    @include flex(column, flex-start, center);
+    width: 100%;
+    max-width: 60rem;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    h2 {
+      @include flex(column, flex-start, center);
+      color: $brand-dark-purple;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 180px;
+        height: 2px;
+        background-color: $brand-dark-purple;
+        margin-top: 1.6rem;
+      }
+    }
+
+    p {
+      width: 100%;
+      max-width: 60rem;
+      font-size: 24px;
+      color: $gray-300;
+    }
+
+    .security-bullets {
+      @include flex(column, flex-start, center);
+      gap: 1rem;
+
+      li {
+        width: 90%;
+        @include flex(row, flex-start, flex-start);
+        gap: 0.8rem;
+        p {
+          font-size: 1.8rem;
+          color: $gray-300;
+          font-weight: 500;
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50px;
+          background-color: $brand-purple;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .container {
+      @include flex(column, center, space-between);
+    }
+
+    .text-security {
+      @include flex(column, center, center);
+
+      h2 {
+        @include flex(column, center, center);
+        text-align: center;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 180px;
+          height: 2px;
+          background-color: $brand-dark-purple;
+          margin-top: 1.6rem;
+        }
+      }
+
+      p {
+        text-align: center;
+        width: 100%;
+        max-width: 60rem;
+        font-size: 24px;
+        color: $gray-300;
+      }
+
+      .security-bullets {
+        li {
+          p {
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}
+
+.s-fast {
+  padding: 8rem 0;
+  .container {
+    position: relative;
+    @include flex(row, center, space-between);
+    gap: 2.4rem;
+  }
+
+  .img-fast-hosting {
+    width: 100%;
+    max-width: 524px;
+  }
+
+  .text-fast {
+    @include flex(column, flex-start, center);
+    width: 100%;
+    max-width: 60rem;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    h2 {
+      @include flex(column, flex-start, center);
+      color: $brand-dark-purple;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 180px;
+        height: 2px;
+        background-color: $brand-dark-purple;
+        margin-top: 1.6rem;
+      }
+    }
+
+    p {
+      width: 100%;
+      max-width: 60rem;
+      font-size: 24px;
+      color: $gray-300;
+    }
+
+    .fast-bullets {
+      @include flex(column, flex-start, center);
+      gap: 1rem;
+
+      li {
+        width: 90%;
+        @include flex(row, flex-start, flex-start);
+        gap: 0.8rem;
+        p {
+          font-size: 1.8rem;
+          color: $gray-300;
+          font-weight: 500;
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50px;
+          background-color: $brand-purple;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .container {
+      @include flex(column, center, space-between);
+    }
+
+    .text-security {
+      @include flex(column, center, center);
+
+      h2 {
+        @include flex(column, center, center);
+        text-align: center;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 180px;
+          height: 2px;
+          background-color: $brand-dark-purple;
+          margin-top: 1.6rem;
+        }
+      }
+
+      p {
+        text-align: center;
+        width: 100%;
+        max-width: 60rem;
+        font-size: 24px;
+        color: $gray-300;
+      }
+
+      .security-bullets {
+        li {
+          p {
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}
+
+.s-advantage {
+  padding: 8rem 0;
+
+  .container {
+    @include flex(column, center, center);
+    gap: 4rem;
+  }
+
+  .title-advantage {
+    h2 {
+      text-align: center;
+      color: $brand-dark-purple;
+    }
+  }
+
+  .card-advantage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3.2rem;
+
+    .card-advantage-item {
+      &:nth-child(1) {
+        margin-top: 4rem;
+      }
+      &:nth-child(3) {
+        margin-top: 4rem;
+      }
+    }
+
+    .img-advantage {
+      img {
+        width: 100%;
+      }
+    }
+
+    p {
+      margin-top: 3.2rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  // Breakpoint para telas médias (tablets e dispositivos menores)
+  @include responsive(1024px) {
+    .card-advantage {
+      grid-template-columns: repeat(2, 1fr);
+
+      .card-advantage-item {
+        &:nth-child(1) {
+          margin-top: 0rem;
+        }
+        &:nth-child(3) {
+          margin-top: 0rem;
+        }
+      }
+
+      /*       .img-advantage {
+          img {
+            width: 392px;
+            height: 392px;
+          }
+        } */
+    }
+  }
+
+  // Breakpoint para telas pequenas (smartphones)
+  @include responsive(768px) {
+    .card-advantage {
+      grid-template-columns: 1fr;
+    }
+  }
+}
