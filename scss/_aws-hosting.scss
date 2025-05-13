@@ -158,7 +158,7 @@
   }
 }
 
-.s-fast {
+.s-fast-aws {
   padding: 8rem 0;
   .container {
     position: relative;
@@ -267,7 +267,7 @@
   }
 }
 
-.s-advantage {
+.s-advantage-aws {
   padding: 8rem 0;
 
   .container {
@@ -275,66 +275,36 @@
     gap: 4rem;
   }
 
-  .title-advantage {
+  .title {
     h2 {
-      text-align: center;
       color: $brand-dark-purple;
+      text-align: center;
     }
   }
 
-  .card-advantage {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3.2rem;
-
-    .card-advantage-item {
-      &:nth-child(1) {
-        margin-top: 4rem;
-      }
-      &:nth-child(3) {
-        margin-top: 4rem;
-      }
-    }
-
-    .img-advantage {
-      img {
-        width: 100%;
-      }
-    }
-
-    p {
-      margin-top: 3.2rem;
-      font-size: 1.8rem;
-    }
+  .content {
+    @include flex(row, center, space-between);
+    gap: 4.8rem;
   }
 
-  // Breakpoint para telas médias (tablets e dispositivos menores)
-  @include responsive(1024px) {
-    .card-advantage {
-      grid-template-columns: repeat(2, 1fr);
+  .resources-aws,
+  .platform {
+    h4 {
+      font-size: 2rem;
+      color: $brand-purple;
 
-      .card-advantage-item {
-        &:nth-child(1) {
-          margin-top: 0rem;
-        }
-        &:nth-child(3) {
-          margin-top: 0rem;
-        }
-      }
-
-      /*       .img-advantage {
-          img {
-            width: 392px;
-            height: 392px;
-          }
-        } */
+      padding-bottom: 2.4rem;
     }
-  }
 
-  // Breakpoint para telas pequenas (smartphones)
-  @include responsive(768px) {
-    .card-advantage {
-      grid-template-columns: 1fr;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 1.6rem;
+      li {
+        @include flex(row, center, center);
+      }
     }
   }
 }
