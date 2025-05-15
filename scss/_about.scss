@@ -111,8 +111,18 @@
       max-width: 58rem;
 
       h3 {
+        @include flex(column, flex-start, flex-start);
         color: $brand-dark-purple;
         margin-bottom: 2.4rem;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 180px;
+          height: 2px;
+          background-color: $brand-dark-purple;
+          margin-top: 1.6rem;
+        }
       }
 
       ul {
