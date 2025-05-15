@@ -19,6 +19,7 @@
       }
 
       p {
+        font-size: 18px;
         color: $neutral-colors-black;
       }
     }
@@ -26,6 +27,160 @@
     img {
       width: 380px;
       height: auto;
+    }
+  }
+
+  @include responsive(768px) {
+    .welcome {
+      flex-wrap: wrap;
+
+      .title {
+        p {
+          text-align: center;
+        }
+      }
+
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+.s-create-at {
+  padding: 8rem 0;
+
+  .container {
+    @include flex(column, center, center);
+  }
+
+  .cards {
+    @include flex(row, center, space-between);
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    .card-item {
+      @include flex(column, center, center);
+      gap: 1.6rem;
+      width: 100%;
+      max-width: 384px;
+
+      border-radius: 20px;
+      box-shadow: 5px 12px 20.4px 0px rgba(0, 0, 0, 0.5);
+      background-color: $neutral-colors-white;
+
+      padding: 2.4rem;
+
+      h3 {
+        color: $brand-purple;
+      }
+
+      p {
+        text-align: center;
+        color: $brand-purple;
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .cards {
+      @include flex(row, center, center);
+    }
+  }
+}
+
+.s-partner {
+  padding: 8rem 0;
+
+  .container {
+    @include flex(column, center, center);
+  }
+
+  .vertical {
+    width: 100%;
+    @include flex(row, center, center);
+    gap: 2.4rem;
+
+    img {
+      width: 420px;
+      height: auto;
+    }
+
+    .text-vertical {
+      width: 100%;
+      max-width: 58rem;
+
+      h3 {
+        color: $brand-dark-purple;
+        margin-bottom: 2.4rem;
+      }
+
+      ul {
+        @include flex(column, flex-start, flex-start);
+        gap: 4.8rem;
+        li {
+          width: 100%;
+          max-width: 500px;
+          span {
+            display: inline-block;
+            font-size: 20px;
+            color: $brand-purple;
+            margin-bottom: 1.2rem;
+          }
+
+          p {
+            font-size: 18px;
+            color: $neutral-colors-black;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  .horizontal {
+    width: 100%;
+    @include flex(row, center, center);
+    gap: 2.4rem;
+
+    ul {
+      @include flex(row, flex-start, flex-start);
+      gap: 4.8rem;
+      li {
+        width: 100%;
+        max-width: 500px;
+        span {
+          display: inline-block;
+          font-size: 20px;
+          color: $brand-purple;
+          margin-bottom: 1.2rem;
+        }
+
+        p {
+          font-size: 18px;
+          color: $neutral-colors-black;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .vertical {
+      margin-bottom: 2.4rem;
+      img {
+        width: 370px;
+      }
+    }
+  }
+
+  @include responsive(640px) {
+    .vertical {
+      flex-wrap: wrap;
+    }
+
+    .horizontal {
+      flex-wrap: wrap;
     }
   }
 }
