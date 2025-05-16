@@ -1,6 +1,7 @@
 .s-hero-wp-hosting {
   padding: 8rem 0;
   .container {
+    position: relative;
     @include flex(column, center, center);
   }
 
