@@ -1,6 +1,10 @@
 .s-about-us {
   padding: 8rem 0;
 
+  .container {
+    position: relative;
+  }
+
   .welcome {
     @include flex(row, center, center);
     gap: 8rem;
@@ -93,6 +97,7 @@
   padding: 8rem 0;
 
   .container {
+    position: relative;
     @include flex(column, center, center);
   }
 
