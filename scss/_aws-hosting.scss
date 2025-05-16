@@ -49,6 +49,36 @@
   }
 }
 
+.s-price-aws-hosting {
+  padding: 8rem 0;
+  .container {
+    @include flex(column, center, center);
+  }
+
+  .title-hero {
+    width: 100%;
+    max-width: 90rem;
+    @include flex(column, center, center);
+    gap: 1.2rem;
+
+    p {
+      color: $brand-purple;
+      text-align: center;
+      font-size: 2.4rem;
+    }
+  }
+
+  .cards {
+    @include flex(row, center, center);
+  }
+
+  @include responsive(768px) {
+    .text-price-hero {
+      @include flex(column, center, flex-start);
+    }
+  }
+}
+
 .s-suport-aws {
   padding: 8rem 0;
   .container {
@@ -59,7 +89,7 @@
 
   .img-security-hosting {
     width: 100%;
-    max-width: 524px;
+    max-width: 580px;
   }
 
   .text-security {
