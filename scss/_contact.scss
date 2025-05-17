@@ -36,13 +36,122 @@
     .content-left {
       width: 100%;
       max-width: 52rem;
+
+      h4 {
+        color: $brand-purple;
+        margin-bottom: 2.4rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        color: $brand-dark-purple;
+        margin-bottom: 4rem;
+      }
+    }
+
+    .btns {
+      @include flex(row, center, flex-start);
+      gap: 2.4rem;
+
+      .btn-primary {
+        background-color: $brand-purple;
+        border: 1px solid $brand-purple;
+
+        &:hover {
+          background-color: $brand-light-purple;
+          border: 1px solid $brand-light-purple;
+          span {
+            color: $neutral-colors-white;
+          }
+        }
+      }
     }
 
     .content-right {
       img {
-        width: 560px;
+        width: 100%;
+        max-width: 560px;
         height: auto;
       }
+    }
+  }
+
+  @include responsive(1024px) {
+    .content {
+      flex-direction: column-reverse;
+      gap: 4rem;
+    }
+  }
+
+  @include responsive(640px) {
+    .content {
+      .btns {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+.s-form {
+  padding: 8rem 0;
+  .content {
+    background-color: $neutral-colors-white;
+    padding: 2rem;
+    border-radius: 2.4rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+  }
+
+  h2 {
+    margin-bottom: 2.4rem;
+    color: $brand-purple;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid $brand-purple;
+      border-radius: 1rem;
+      background-color: $neutral-colors-white;
+      font-size: 1.8rem;
+      outline: none;
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: $brand-purple;
+        background-color: #fff;
+      }
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: $brand-purple;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($brand-purple, 10%);
     }
   }
 }
