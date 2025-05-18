@@ -1,3 +1,36 @@
+.s-social {
+  @include flex(column, center, center);
+  position: fixed;
+  top: 40%;
+  right: 0;
+  padding: 3.2rem 1.2rem;
+  border-radius: 20px 0 0 20px;
+  background-color: $brand-purple;
+  z-index: 50;
+
+  .social-media {
+    @include flex(column, center, center);
+    gap: 2.4rem;
+
+    a {
+      img {
+        width: 3.2rem;
+        height: auto;
+      }
+    }
+  }
+
+  @include responsive(640px) {
+    .social-media {
+      a {
+        img {
+          width: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
 .btn-primary {
   @include flex(row, center, center);
   gap: 1.2rem;
