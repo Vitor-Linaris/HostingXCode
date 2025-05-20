@@ -890,42 +890,11 @@
 
   .map-data-center {
     position: relative;
-    /* .cdn-map-pin {
-      position: absolute;
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: -1;
-        background-color: #000;
-        border-radius: 99px;
-        height: 34px;
-        left: -2px;
-        top: -2px;
-        width: 34px;
-      }
 
-      img {
-        height: auto;
-        width: 30px;
-        vertical-align: baseline;
-      }
-
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: -1;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 10px solid #000;
-        bottom: -4px;
-        height: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-      }
-    } */
+    .map-bg {
+      width: 100%;
+      height: auto;
+    }
 
     .cdn-map-pin {
       position: absolute;
