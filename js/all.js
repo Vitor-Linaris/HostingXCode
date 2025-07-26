@@ -1,1 +1,1 @@
-"use strict";
+"use strict";for(var track=document.querySelector(".logo-marquee__track"),group=document.querySelector(".logo-marquee__group"),i=0;i<4;i++){var clone=group.cloneNode(!0);track.appendChild(clone)}

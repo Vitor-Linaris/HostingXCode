@@ -183,3 +183,44 @@
     @include flex(row, flex-start, center);
   }
 }
+
+$scroll-speed: 180s;
+
+.logo-marquee {
+  overflow: hidden;
+  padding: 2rem 0;
+  background: $brand-purple;
+
+  &__track {
+    display: flex;
+    width: fit-content;
+    animation: scroll $scroll-speed linear infinite;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 11rem; // espaçamento entre logos
+    min-width: 100vw;
+
+    img {
+      height: 40px;
+      width: auto;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
