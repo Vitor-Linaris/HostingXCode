@@ -90,7 +90,7 @@
     gap: 2.4rem;
   }
 
-  .img-security-hosting {
+  .img-manage-aws {
     width: 100%;
     max-width: 580px;
   }
@@ -104,7 +104,7 @@
 
     h2 {
       @include flex(column, flex-start, center);
-      color: $brand-dark-purple;
+      color: $neutral-colors-white;
 
       &::after {
         content: "";
@@ -120,7 +120,7 @@
       width: 100%;
       max-width: 60rem;
       font-size: 24px;
-      color: $gray-200;
+      color: $brand-dark-purple;
     }
 
     .security-bullets {
@@ -147,6 +147,12 @@
           margin-top: 4px;
         }
       }
+    }
+  }
+
+  @include responsive(1024px) {
+    .img-manage-aws {
+      max-width: 420px;
     }
   }
 
@@ -205,6 +211,347 @@
       max-width: 520px;
       color: $gray-600;
       font-size: 18px;
+    }
+  }
+
+  @include responsive(1024px) {
+    .container {
+      flex-direction: column;
+
+      h3 {
+        max-width: 100%;
+      }
+
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.s-who-dedicated {
+  padding: 8rem 0;
+  .container {
+    position: relative;
+    @include flex(row, center, space-between);
+    gap: 2.4rem;
+  }
+
+  .img-fast-hosting {
+    width: 100%;
+    max-width: 524px;
+  }
+
+  .text-fast {
+    @include flex(column, flex-start, center);
+    width: 100%;
+    max-width: 60rem;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    h2 {
+      @include flex(column, flex-start, center);
+      color: $brand-dark-purple;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 180px;
+        height: 2px;
+        background-color: $brand-dark-purple;
+        margin-top: 1.6rem;
+      }
+    }
+
+    p {
+      width: 100%;
+      max-width: 60rem;
+      font-size: 24px;
+      color: $gray-300;
+    }
+
+    .fast-bullets {
+      @include flex(column, flex-start, center);
+      gap: 1rem;
+
+      li {
+        width: 90%;
+        @include flex(row, flex-start, flex-start);
+        gap: 0.8rem;
+        p {
+          font-size: 1.8rem;
+          color: $gray-300;
+          font-weight: 500;
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50px;
+          background-color: $brand-purple;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  @include responsive(1024px) {
+    .container {
+      @include flex(column, center, space-between);
+    }
+
+    .text-security {
+      @include flex(column, center, center);
+
+      h2 {
+        @include flex(column, center, center);
+        text-align: center;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 180px;
+          height: 2px;
+          background-color: $brand-dark-purple;
+          margin-top: 1.6rem;
+        }
+      }
+
+      p {
+        text-align: center;
+        width: 100%;
+        max-width: 60rem;
+        font-size: 24px;
+        color: $gray-300;
+      }
+
+      .security-bullets {
+        li {
+          p {
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}
+
+.s-who-host-aws {
+  padding: 8rem 0;
+  .container {
+    position: relative;
+    @include flex(row, center, space-between);
+    gap: 2.4rem;
+  }
+
+  .img-fast-hosting {
+    width: 100%;
+    max-width: 524px;
+  }
+
+  .text-fast {
+    @include flex(column, flex-start, center);
+    width: 100%;
+    max-width: 60rem;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    h2 {
+      @include flex(column, flex-start, center);
+      color: $brand-dark-purple;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 180px;
+        height: 2px;
+        background-color: $brand-dark-purple;
+        margin-top: 1.6rem;
+      }
+    }
+
+    p {
+      width: 100%;
+      max-width: 60rem;
+      font-size: 24px;
+      color: $gray-300;
+    }
+
+    .fast-bullets {
+      @include flex(column, flex-start, center);
+      gap: 1rem;
+
+      li {
+        width: 90%;
+        @include flex(row, flex-start, flex-start);
+        gap: 0.8rem;
+        p {
+          font-size: 1.8rem;
+          color: $gray-300;
+          font-weight: 500;
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50px;
+          background-color: $brand-purple;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  @include responsive(1024px) {
+    .container {
+      @include flex(column-reverse, center, space-between);
+    }
+
+    .text-security {
+      @include flex(column, center, center);
+
+      h2 {
+        @include flex(column, center, center);
+        text-align: center;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 180px;
+          height: 2px;
+          background-color: $brand-dark-purple;
+          margin-top: 1.6rem;
+        }
+      }
+
+      p {
+        text-align: center;
+        width: 100%;
+        max-width: 60rem;
+        font-size: 24px;
+        color: $gray-300;
+      }
+
+      .security-bullets {
+        li {
+          p {
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}
+
+.s-what-aws {
+  padding: 8rem 0;
+  .container {
+    position: relative;
+    @include flex(row, center, space-between);
+    gap: 2.4rem;
+  }
+
+  .img-fast-hosting {
+    width: 100%;
+    max-width: 524px;
+  }
+
+  .text-fast {
+    @include flex(column, flex-start, center);
+    width: 100%;
+    max-width: 60rem;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    h2 {
+      @include flex(column, flex-start, center);
+      color: $brand-dark-purple;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 180px;
+        height: 2px;
+        background-color: $brand-dark-purple;
+        margin-top: 1.6rem;
+      }
+    }
+
+    p {
+      width: 100%;
+      max-width: 60rem;
+      font-size: 24px;
+      color: $gray-300;
+    }
+
+    .fast-bullets {
+      @include flex(column, flex-start, center);
+      gap: 1rem;
+
+      li {
+        width: 90%;
+        @include flex(row, flex-start, flex-start);
+        gap: 0.8rem;
+        p {
+          font-size: 1.8rem;
+          color: $gray-300;
+          font-weight: 500;
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50px;
+          background-color: $brand-purple;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  @include responsive(1024px) {
+    .container {
+      @include flex(column-reverse, center, space-between);
+    }
+
+    .text-security {
+      @include flex(column, center, center);
+
+      h2 {
+        @include flex(column, center, center);
+        text-align: center;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 180px;
+          height: 2px;
+          background-color: $brand-dark-purple;
+          margin-top: 1.6rem;
+        }
+      }
+
+      p {
+        text-align: center;
+        width: 100%;
+        max-width: 60rem;
+        font-size: 24px;
+        color: $gray-300;
+      }
+
+      .security-bullets {
+        li {
+          p {
+            text-align: start;
+          }
+        }
+      }
     }
   }
 }
