@@ -431,9 +431,16 @@
   .text-shared {
     @include flex(column, center, center);
     width: 100%;
-    max-width: 65rem;
+    max-width: 72rem;
     gap: 2.4rem;
     flex-wrap: wrap;
+
+    .icon-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
 
     h2 {
       @include flex(column, center, center);
@@ -452,10 +459,10 @@
 
     p {
       width: 100%;
-      max-width: 60rem;
-      text-align: center;
-      font-size: 24px;
-      color: $gray-300;
+      max-width: 68rem;
+
+      font-size: 18px;
+      color: $gray-400;
     }
   }
 
@@ -482,10 +489,17 @@
     gap: 2.4rem;
     flex-wrap: wrap;
 
+    .icon-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
     h2 {
       @include flex(column, flex-start, center);
       width: 100%;
-      max-width: 36rem;
+      max-width: 68rem;
       color: $brand-dark-purple;
 
       &::after {
@@ -500,8 +514,9 @@
 
     p {
       width: 100%;
-      max-width: 45rem;
-      font-size: 24px;
+      max-width: 65rem;
+      font-size: 18px;
+      font-weight: $gray-600;
       color: $neutral-colors-black;
     }
 
@@ -510,7 +525,6 @@
       gap: 1rem;
 
       li {
-        width: 90%;
         @include flex(row, flex-start, center);
         gap: 0.8rem;
         p {
@@ -619,9 +633,16 @@
   .text-aws {
     @include flex(column, flex-start, center);
     width: 100%;
-    max-width: 60rem;
+    max-width: 68rem;
     gap: 2.4rem;
     flex-wrap: wrap;
+
+    .icon-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
 
     h2 {
       @include flex(column, flex-start, center);
@@ -639,9 +660,9 @@
 
     p {
       width: 100%;
-      max-width: 60rem;
-      font-size: 24px;
-      color: $gray-300;
+      max-width: 68rem;
+      font-size: 18px;
+      color: $gray-500;
     }
 
     .aws-bullets {
@@ -649,7 +670,6 @@
       gap: 1rem;
 
       li {
-        width: 90%;
         @include flex(row, flex-start, flex-start);
         gap: 0.8rem;
         p {
@@ -727,10 +747,16 @@
     gap: 2.4rem;
     flex-wrap: wrap;
 
+    .icon-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     h2 {
       @include flex(column, flex-start, center);
       width: 100%;
-      max-width: 36rem;
+      max-width: 68rem;
       color: $brand-dark-purple;
 
       &::after {
@@ -748,7 +774,6 @@
       gap: 1rem;
 
       li {
-        width: 90%;
         @include flex(row, flex-start, flex-start);
         gap: 0.8rem;
         p {

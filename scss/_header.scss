@@ -1,197 +1,217 @@
 @use "sass:math";
 
-header {
+.site-header {
   position: relative;
-  display: flex;
   width: 100%;
+  background: #fff;
+  z-index: 3;
   height: 12rem;
-  background-color: #fff;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+
   .container {
     @include flex(row, center, space-between);
-  }
-
-  .logo {
-    margin-right: 2.4rem;
-    img {
-      width: 100%;
-      max-width: 96px;
-      height: auto;
-    }
-  }
-
-  .menu {
-    ul {
-      @include flex(row, center, space-between);
-      gap: 2.4rem;
-
-      li {
-        width: 100%;
-        max-width: fit-content;
-        a {
-          font-size: 1.8rem;
-          font-weight: 500;
-          color: $brand-purple;
-          transition: color 0.3s ease;
-
-          &:hover {
-            color: $brand-light-purple;
-          }
-        }
-      }
-    }
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 96px;
-    left: 0;
     width: 100%;
-    // Dark overlay on open nav
-    &::before {
-      background: rgba(0, 0, 0, 0.5);
-      content: "";
-      height: 100vh;
-      left: 0;
-      top: 0;
-      position: absolute;
-      opacity: 0;
-      visibility: hidden;
-      width: 100%;
-      transition: all 0.3s;
-    }
-    li {
-      border-bottom: 1px solid #ddd;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-20px);
-      transition: all 0.3s;
-      a {
-        background: #fff;
-        color: #404040;
-        display: block;
-        font-size: 18px;
-        font-weight: 700;
-        padding: 12px 20px;
-        text-align: left;
-        width: 100%;
-        transition: all 0.3s;
-        &:hover {
-          color: $brand-purple;
-        }
-      }
+  }
+
+  .logo img {
+    max-width: 96px;
+    height: auto;
+  }
+
+  .right-block {
+    @include flex(row, center, flex-end);
+    gap: 2.4rem;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  /* ===== Desktop Menu ===== */
+  .menu ul {
+    @include flex(row, center, flex-end);
+    gap: 2.4rem;
+  }
+  .menu a {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: $brand-purple;
+    transition: color 0.3s;
+    &:hover {
+      color: $brand-light-purple;
     }
   }
 
+  .has-mega {
+    position: relative;
+  }
+  .menu-trigger {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    @include flex(row, center, center);
+    gap: 0.6rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: $brand-purple;
+    i {
+      font-size: 1.8rem;
+      transition: transform 0.2s;
+    }
+  }
+
+  .mega {
+    position: absolute;
+    top: calc(100% + 1.2rem);
+    right: 0;
+    min-width: 440px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    /* animação via height em JS */
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .mega.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mega-item {
+    @include flex(row, center, flex-start);
+    gap: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    color: #404040;
+    text-decoration: none;
+    font-size: 1.6rem;
+    img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+    &:hover {
+      background: #f7f5ff;
+      color: $brand-purple;
+    }
+  }
+
+  /* Sign in */
   .btn-sign {
     @include flex(row, center, center);
     gap: 2rem;
     padding: 1.2rem 4rem 1.2rem 1.2rem;
-    border-radius: 50px 0px 0px 50px;
-    background-color: $brand-purple;
-    transition: all 0.3s ease;
+    border-radius: 50px 0 0 50px;
+    background: $brand-purple;
+    transition: background 0.3s;
     img {
-      width: 100%;
       max-width: 4rem;
-      height: auto;
     }
-
     span {
+      color: #fff;
       font-size: 1.8rem;
-      font-weight: 400;
-      color: $gray-100;
+      font-weight: 300;
     }
-
     &:hover {
-      background-color: $brand-light-purple;
+      background: $brand-light-purple;
     }
   }
 
+  /* Botão hamburguer (esconde desktop) */
+  .hamb-btn {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+  }
+
+  /* ===== Mobile Nav ===== */
+  .nav-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #eee;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    height: 0; /* animada via JS */
+  }
+
+  .nav-list > li {
+    border-bottom: 1px solid #eee;
+  }
+  .nav-list a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 1.7rem;
+    color: #404040;
+    text-decoration: none;
+    &:hover {
+      color: $brand-purple;
+    }
+  }
+
+  .mobile-group .sub-trigger {
+    width: 100%;
+    padding: 14px 20px;
+    background: transparent;
+    border: 0;
+    text-align: left;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #404040;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    i {
+      transition: transform 0.2s;
+    }
+  }
+  .mobile-group .sub {
+    overflow: hidden;
+    height: 0;
+    li a {
+      padding-left: 32px;
+      font-weight: 400;
+    }
+  }
+  .mobile-group .sub.is-open + .nothing {
+  }
+
+  .mobile-login a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* breakpoints */
   @include responsive(1024px) {
     height: 9.6rem;
-    .menu {
-      ul {
-        gap: 2rem;
-        li {
-          a {
-            font-size: 1.6rem;
-          }
-        }
-      }
+    .menu a,
+    .menu-trigger {
+      font-size: 1.6rem;
     }
-
-    .btn-sign {
-      gap: 0.8rem;
-      padding: 1.2rem 2rem 1.2rem 1.2rem;
-
-      span {
-        font-size: 1.6rem;
-      }
+    .btn-sign span {
+      font-size: 1.6rem;
     }
   }
-
   @include responsive(768px) {
     .menu {
       display: none;
     }
-
-    .nav-links {
+    .btn-sign {
+      display: none;
+    } /* se quiser mostrar no mobile, remova esta linha */
+    .hamb-btn {
       display: block;
-    }
-  }
-}
-
-input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  // Nav open styling - achieved with ':checked' selector
-  &:checked + label {
-    border: 4px solid $brand-light-purple;
-    border-radius: 50%;
-    height: 28px;
-    top: 36px;
-    right: 164px;
-    width: 28px;
-    transform: rotate(-135deg);
-    &::before {
-      background: $brand-light-purple;
-      top: 8px;
-      left: 4px;
-      width: 12px;
-    }
-    &::after {
-      background: $brand-light-purple;
-      opacity: 1;
-      top: 8px;
-      left: 4px;
-      visibility: visible;
-      width: 12px;
-    }
-    &:hover {
-      border-color: $brand-purple;
-      &::before,
-      &::after {
-        background: $brand-purple;
-      }
-    }
-  }
-  &:checked ~ .nav-links {
-    &::before {
-      opacity: 1;
-      visibility: visible;
-    }
-    li {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-
-      @for $i from 1 through length($nav-links) {
-        &:nth-child(#{$i}) {
-          transition-delay: math.div(($i - 1), 10) + s;
-        }
-      }
     }
   }
 }

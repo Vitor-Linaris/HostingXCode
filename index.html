@@ -8,46 +8,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet" />
 
     <link rel="stylesheet" href="./css/plugins.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <title>HostingxCloud - Home</title>
+    <title>Xcloud - Hospedagem de Sites</title>
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <div class="container">
-        <div class="logo">
+        <!-- ESQUERDA: LOGO -->
+        <a class="logo" href="/">
           <img src="./assets/svg/Main_Gradient.svg" alt="Logo Penta" />
-        </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/hosting.html">Hospedagem De Sites</a></li>
-            <li><a href="/wp-hosting.html">Hospedagem Wordpress</a></li>
-            <li><a href="/aws-hosting.html">Hospedagem Amazon Dedicada</a></li>
-          </ul>
-        </nav>
-        <nav>
-          <input type="checkbox" id="hamburger1" />
-          <label for="hamburger1"></label>
-
-          <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/hosting.html">Hospedagem De Sites</a></li>
-            <li><a href="/wp-hosting.html">Hospedagem Wordpress</a></li>
-            <li><a href="/aws-hosting.html">Hospedagem Amazon Dedicada</a></li>
-          </ul>
-        </nav>
-        <a href="#" class="btn-sign">
-          <img src="./assets/svg/sign.svg" alt="Icone Sign" />
-          <span>Sign in</span>
         </a>
+
+        <!-- DIREITA: MENU + LOGIN -->
+        <div class="right-block">
+          <!-- Desktop / Tablet -->
+          <nav class="menu" aria-label="Principal">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/sobre.html">Sobre nós</a></li>
+
+              <!-- PRODUTOS com Mega -->
+              <li class="has-mega">
+                <button
+                  class="menu-trigger"
+                  aria-haspopup="true"
+                  aria-expanded="false">
+                  Produtos
+                  <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+                </button>
+
+                <!-- MEGA MENU -->
+                <div class="mega" role="menu" aria-label="Produtos">
+                  <a class="mega-item" href="/aws-hosting.html" role="menuitem">
+                    <img src="./assets/svg/aws.svg" alt="" />
+                    <span>Hospedagem Amazon</span>
+                  </a>
+                  <a class="mega-item" href="/hosting.html" role="menuitem">
+                    <img src="./assets/svg/server.svg" alt="" />
+                    <span>Hospedagem de Sites</span>
+                  </a>
+                  <a class="mega-item" href="/wp-hosting.html" role="menuitem">
+                    <img src="./assets/svg/wp.svg" alt="" />
+                    <span>Hospedagem WordPress</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Sign in (fica à direita) -->
+          <a href="/login" class="btn-sign">
+            <img src="./assets/svg/sign.svg" alt="Icone Sign" />
+            <span>Sign in</span>
+          </a>
+
+          <!-- Botão Mobile -->
+          <button
+            class="hamb-btn"
+            id="hambBtn"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="mobileNav">
+            <i class="ri-menu-line"></i>
+          </button>
+        </div>
       </div>
+
+      <!-- MENU MOBILE -->
+      <nav
+        id="mobileNav"
+        class="nav-mobile"
+        aria-label="Navegação móvel"
+        hidden>
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/sobre.html">Sobre nós</a></li>
+
+          <li class="mobile-group">
+            <button class="sub-trigger" aria-expanded="false">
+              Produtos <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <ul class="sub">
+              <li><a href="/aws-hosting.html">Hospedagem Amazon</a></li>
+              <li><a href="/hosting.html">Hospedagem de Sites</a></li>
+              <li><a href="/wp-hosting.html">Hospedagem WordPress</a></li>
+            </ul>
+          </li>
+
+          <li class="mobile-login">
+            <a href="/login"><i class="ri-user-line"></i> Sign in</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="s-social">
+    <!-- <section class="s-social">
       <div class="social-media">
         <a href="https://www.facebook.com/" target="_blank" class="facebook">
           <img
@@ -66,7 +129,7 @@
             alt="Icon youtube" />
         </a>
       </div>
-    </section>
+    </section> -->
 
     <section class="s-hero">
       <div class="container">
@@ -236,12 +299,13 @@
               alt="Xcloud-penta" />
             <div class="card-header">
               <h4>Hospedagem SSD</h4>
+              <p style="color: black; font-weight: normal">A partir de:</p>
               <div class="price">
                 <span class="currency">R$</span>
                 <div class="amount">9</div>
                 <div class="bottom">
                   <span class="cents">,99</span>
-                  <span class="per-month">/month</span>
+                  <span class="per-month">/mês</span>
                 </div>
               </div>
             </div>
@@ -249,15 +313,11 @@
               <ul>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>1 Site</p>
+                  <p>1 Website</p>
                 </li>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>50GB Espaço SSD</p>
-                </li>
-                <li>
-                  <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>1 conta de E-mail 10GB</p>
+                  <p>10GB Espaço SSD</p>
                 </li>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
@@ -265,7 +325,11 @@
                 </li>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>1 conta de E-mail 10GB</p>
+                  <p>10GB de Largura da Banda</p>
+                </li>
+                <li>
+                  <img src="./assets/webp/check-blue.webp" alt="check-blue" />
+                  <p>Let's Encrypt SSL</p>
                 </li>
               </ul>
             </div>
@@ -287,10 +351,11 @@
                 alt="Xcloud-penta" />
             </div>
             <div class="card-header">
-              <h4>Hospedagem SSD</h4>
+              <h4>Hospedagem Wordpress</h4>
+              <p style="color: black; font-weight: normal">A partir de:</p>
               <div class="price">
                 <span class="currency">R$</span>
-                <div class="amount">9</div>
+                <div class="amount">10</div>
                 <div class="bottom">
                   <span class="cents">,99</span>
                   <span class="per-month">/month</span>
@@ -301,7 +366,7 @@
               <ul>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>1 Site</p>
+                  <p>1 Website</p>
                 </li>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
@@ -313,11 +378,16 @@
                 </li>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>1 conta de E-mail 10GB</p>
+                  <p>25GB de Largura da Banda</p>
                 </li>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>1 conta de E-mail 10GB</p>
+                  <p>Let's Encrypt SSL</p>
+                </li>
+
+                <li>
+                  <img src="./assets/webp/check-blue.webp" alt="check-blue" />
+                  <p>Gerenciador de Wordpress Intergrado</p>
                 </li>
               </ul>
             </div>
@@ -339,13 +409,15 @@
                 alt="Xcloud-penta" />
             </div>
             <div class="card-header">
-              <h4>Hospedagem SSD</h4>
+              <p style="color: black; font-weight: semibold">São Paulo</p>
+              <h4>Hospedagem Amazon Gerenciada</h4>
+              <p style="color: black; font-weight: normal">A partir de:</p>
               <div class="price">
                 <span class="currency">R$</span>
-                <div class="amount">9</div>
+                <div class="amount">249</div>
                 <div class="bottom">
                   <span class="cents">,99</span>
-                  <span class="per-month">/month</span>
+                  <span class="per-month">/mês</span>
                 </div>
               </div>
             </div>
@@ -353,23 +425,27 @@
               <ul>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>1 Site</p>
+                  <p>2 Core Processor</p>
                 </li>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>50GB Espaço SSD</p>
+                  <p>20GB SSD Espaço em Disco</p>
                 </li>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>1 conta de E-mail 10GB</p>
+                  <p>2 GB Largura da Banda</p>
                 </li>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>1 conta de E-mail 10GB</p>
+                  <p>Painel Xcloud Integrado</p>
                 </li>
                 <li>
                   <img src="./assets/webp/check-blue.webp" alt="check-blue" />
-                  <p>1 conta de E-mail 10GB</p>
+                  <p>Ferramentas para Wordpress, Magento e Laravel</p>
+                </li>
+                <li>
+                  <img src="./assets/webp/check-blue.webp" alt="check-blue" />
+                  <p>Servidores no Brasil</p>
                 </li>
               </ul>
             </div>
@@ -425,12 +501,20 @@
           src="./assets/webp/img-shared-hosting.webp"
           alt="Image Shared" />
         <div class="text-shared">
-          <h2>Hospedagem Compartilhada</h2>
+          <div class="icon-text">
+            <img
+              src="./assets/svg/icon_host_compartilhado.svg"
+              alt="host compartilhado" />
+            <h2>Hospedagem Compartilhada SSD</h2>
+          </div>
           <p>
-            A hospedagem WordPress do Xcloud oferece a melhor combinação de
-            desempenho e facilidade de uso para o seu site. Com recursos
-            otimizados e suporte especializado, gerenciar seu conteúdo nunca foi
-            tão fácil.
+            Todos os serviços de hospedagem da Xcloud utilizam SSDs Samsung
+            Enterprise, garantindo alta velocidade, confiabilidade e performance
+            superior em comparação com HDDs. <br /><br />
+            O sistema da Xcloud é baseado em uma estrutura de nuvem com
+            autoscaling e balanceamento de carga global, o que permite que o
+            site acesse múltiplos servidores conforme a demanda cresce, mantendo
+            performance estável e rápida mesmo em picos de tráfego
           </p>
           <a href="#" class="btn-primary">
             <span>Ver Planos</span>
@@ -468,7 +552,12 @@
     <section class="s-wp-hosting">
       <div class="container">
         <div class="text-wp">
-          <h2>Hospedagem Wordpress</h2>
+          <div class="icon-text">
+            <img
+              src="./assets/svg/hospedagem_wordpress_img.svg"
+              alt="hospedagem wordpress-hosting" />
+            <h2>Hospedagem Wordpress</h2>
+          </div>
           <p>
             Oferecemos uma infraestrutura rápida e segura, com um CDN global.
             Segurança sólida e gerenciamento intuitivo de vários sites.
@@ -534,41 +623,47 @@
           src="./assets/webp/xaws.webp"
           alt="Image AWS" />
         <div class="text-aws">
-          <h2>Hospedagem AWS no Brasil com Painel Xcloud</h2>
+          <div class="icon-text">
+            <img
+              src="./assets/svg/hospedagem_aws_icon.svg"
+              alt="Icone hospedagem AWS" />
+            <h2>Hospedagem AWS no Brasil com Painel Xcloud</h2>
+          </div>
           <p>
-            &nbsp; &nbsp;Oferecemos hospedagem em nuvem através da Amazon Web
-            Services (AWS), com infraestrutura localizada no Brasil. Isso
-            significa que seu site será hospedado em servidores de alta
-            performance dentro do território nacional, garantindo velocidade
-            superior, menor latência e melhor experiência para seus visitantes.
+            Oferecemos hospedagem em nuvem através da Amazon Web Services (AWS),
+            com infraestrutura localizada no Brasil. Isso significa que seu site
+            será hospedado em servidores de alta performance dentro do
+            território nacional, garantindo velocidade superior, menor latência
+            e melhor experiência para seus visitantes.
             <br /><br />
 
-            &nbsp; &nbsp;A AWS é reconhecida mundialmente pela sua segurança,
-            estabilidade e escalabilidade. No Brasil, a infraestrutura é
-            moderna, com conexões de alta velocidade e excelente
-            disponibilidade, ideal para empresas que buscam desempenho e
-            confiabilidade. <br /><br />
+            A AWS é reconhecida mundialmente pela sua segurança, estabilidade e
+            escalabilidade. No Brasil, a infraestrutura é moderna, com conexões
+            de alta velocidade e excelente disponibilidade, ideal para empresas
+            que buscam desempenho e confiabilidade. <br /><br />
 
-            &nbsp; &nbsp;Mesmo sendo hospedado na AWS, você não precisa se
-            preocupar com a complexidade técnica da Amazon. Toda a gestão do seu
-            ambiente será feita por meio do nosso Painel Xcloud, uma interface
-            intuitiva, fácil de usar e totalmente em português. Com ele, você
-            pode:
+            Mesmo sendo hospedado na AWS, você não precisa se preocupar com a
+            complexidade técnica da Amazon. Toda a gestão do seu ambiente será
+            feita por meio do nosso Painel Xcloud, uma interface intuitiva,
+            fácil de usar e totalmente em português. Com ele, você pode:
           </p>
           <ul class="aws-bullets">
             <li>
-              <p>Plugin exclusivo para tornar seu WordPress mais rápido</p>
+              <p>
+                Intel Xeon Platinum 8000 series processor (Skylake-SP or Cascade
+                Lake)
+              </p>
             </li>
             <li>
-              <p>CDN Global Ilimitado e E-mails ilimitados</p>
+              <p>RAM: DDR4 based on CPU generation</p>
             </li>
             <li>
-              <p>Segurança para o seu WordPress com Relatório de Checksum</p>
+              <p>Storage: Amazon SSD storage</p>
             </li>
           </ul>
           <p>
             &nbsp; &nbsp;Essa combinação une o melhor dos dois mundos:<span
-              style="font-weight: bold; font-size: 20px">
+              style="font-weight: 500; font-size: 20px">
               a infraestrutura poderosa da AWS e a simplicidade do nosso painel
               Xcloud.</span
             >
@@ -614,10 +709,13 @@
     <section class="s-marketing-agency">
       <div class="container">
         <div class="text-marketing">
-          <h2>AGÊNCIA DE MARKETING</h2>
+          <div class="icon-text">
+            <img src="./assets/svg/icone-parceria.svg" alt="icone parceria" />
+            <h2>Xcloud Studio (parceria)</h2>
+          </div>
           <ul class="marketing-bullets">
             <li>
-              <p>HostingxCloud Marketing Agency | Serviços especializados</p>
+              <p>Xcloud Studio | Serviços especializados</p>
             </li>
             <li>
               <p>Desenvolvimento de sites e blog</p>
@@ -632,10 +730,10 @@
               <p>Tráfego pago (Google, Facebook e Instagram ADS)</p>
             </li>
           </ul>
-          <a href="#" class="btn-primary">
-            <span>Ver Planos</span>
-            <img src="./assets/svg/carbon_arrow-up.svg" alt="" />
-          </a>
+          <!-- <a href="#" class="btn-primary">
+            <!--<span>Ver Planos</span>
+            <!--<img src="./assets/svg/carbon_arrow-up.svg" alt="" />
+          </a> -->
         </div>
         <img
           class="img-marketing"
@@ -1733,7 +1831,7 @@
         </div>
 
         <div class="footer-bottom">
-          <img src="./assets/img/stripe.png" alt="" />
+          <img src="./assets/img/stripee.png" alt="" />
           <span>Direitos Reservados @ 2025 Hosting Xcloud</span>
         </div>
       </div>
