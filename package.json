@@ -1,9 +1,9 @@
 {
   "name": "nome-projeto",
   "version": "1.0.0",
-  "description": "Um projeto criado para o codeboost",
+  "description": "Um projeto criado para HostingxCloud",
   "main": "index.js",
-  "author": "Luiz Ricardo",
+  "author": "Vitor Linaris",
   "license": "MIT",
   "type": "module",
   "dependencies": {

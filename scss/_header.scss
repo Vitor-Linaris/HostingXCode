@@ -5,9 +5,10 @@
   width: 100%;
   background: #fff;
   z-index: 3;
-  height: 12rem;
+  height: 9.6rem;
   display: flex;
   align-items: center;
+  box-shadow: 0 2px 8px hsla(278, 67%, 12%, 0.1);
 
   .container {
     @include flex(row, center, space-between);
@@ -15,7 +16,7 @@
   }
 
   .logo img {
-    max-width: 96px;
+    max-width: 80px;
     height: auto;
   }
 
@@ -53,9 +54,13 @@
     font-size: 1.8rem;
     font-weight: 300;
     color: $brand-purple;
+    transition: color 0.3s;
     i {
       font-size: 1.8rem;
       transition: transform 0.2s;
+    }
+    &:hover {
+      color: $brand-light-purple;
     }
   }
 
@@ -105,8 +110,8 @@
   /* Sign in */
   .btn-sign {
     @include flex(row, center, center);
-    gap: 2rem;
-    padding: 1.2rem 4rem 1.2rem 1.2rem;
+    gap: 1.2rem;
+    padding: 0.8rem 3rem 0.8rem 0.8rem;
     border-radius: 50px 0 0 50px;
     background: $brand-purple;
     transition: background 0.3s;
