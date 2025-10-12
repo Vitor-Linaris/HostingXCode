@@ -20,6 +20,19 @@
     <title>Xcloud - Hospedagem de Sites</title>
   </head>
   <body>
+    <!-- TOP PROMO BAR -->
+    <div class="top-promo">
+      <div class="promo-container">
+        <p>
+          <strong>Hospedagem AWS gerenciada:</strong> alta performance e preço
+          reduzido!
+        </p>
+        <a href="/aws-hosting.html" class="promo-link">
+          Ver promoção <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="container">
         <!-- ESQUERDA: LOGO -->
@@ -47,10 +60,6 @@
 
                 <!-- MEGA MENU -->
                 <div class="mega" role="menu" aria-label="Produtos">
-                  <a class="mega-item" href="/aws-hosting.html" role="menuitem">
-                    <img src="./assets/svg/aws.svg" alt="" />
-                    <span>Hospedagem Amazon</span>
-                  </a>
                   <a class="mega-item" href="/hosting.html" role="menuitem">
                     <img src="./assets/svg/ic_server.svg" alt="" />
                     <span>Hospedagem de Sites</span>
@@ -58,6 +67,10 @@
                   <a class="mega-item" href="/wp-hosting.html" role="menuitem">
                     <img src="./assets/svg/ic-wordpress.svg" alt="" />
                     <span>Hospedagem WordPress</span>
+                  </a>
+                  <a class="mega-item" href="/aws-hosting.html" role="menuitem">
+                    <img src="./assets/svg/aws.svg" alt="" />
+                    <span>Hospedagem Amazon</span>
                   </a>
                 </div>
               </li>
@@ -84,12 +97,8 @@
         </div>
       </div>
 
-      <!-- MENU MOBILE -->
-      <nav
-        id="mobileNav"
-        class="nav-mobile"
-        aria-label="Navegação móvel"
-        hidden>
+      <!-- MENU MOBILE (REMOVIDO o atributo hidden) -->
+      <nav id="mobileNav" class="nav-mobile" aria-label="Navegação móvel">
         <ul class="nav-list">
           <li><a href="/">Home</a></li>
           <li><a href="/sobre.html">Sobre nós</a></li>
@@ -99,9 +108,9 @@
               Produtos <i class="ri-arrow-down-s-line"></i>
             </button>
             <ul class="sub">
-              <li><a href="/aws-hosting.html">Hospedagem Amazon</a></li>
               <li><a href="/hosting.html">Hospedagem de Sites</a></li>
               <li><a href="/wp-hosting.html">Hospedagem WordPress</a></li>
+              <li><a href="/aws-hosting.html">Hospedagem Amazon</a></li>
             </ul>
           </li>
 

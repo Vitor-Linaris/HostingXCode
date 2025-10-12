@@ -76,7 +76,9 @@
     padding: 12px;
     display: grid;
     grid-template-columns: 1fr;
+    z-index: 200;
     gap: 6px;
+
     /* animação via height em JS */
     overflow: hidden;
     height: 0;
@@ -134,6 +136,7 @@
     border: 0;
     background: transparent;
     font-size: 28px;
+    color: $brand-purple;
   }
 
   /* ===== Mobile Nav ===== */
@@ -146,7 +149,9 @@
     border-top: 1px solid #eee;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    height: 0; /* animada via JS */
+    height: 0; /* fechado por padrão - animado via JS */
+    will-change: height;
+    z-index: 5;
   }
 
   .nav-list > li {
@@ -156,10 +161,10 @@
     display: block;
     padding: 14px 20px;
     font-size: 1.7rem;
-    color: #404040;
+    color: $brand-purple;
     text-decoration: none;
     &:hover {
-      color: $brand-purple;
+      color: $brand-light-purple;
     }
   }
 
@@ -171,7 +176,7 @@
     text-align: left;
     font-size: 1.7rem;
     font-weight: 700;
-    color: #404040;
+    color: $brand-purple;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -187,8 +192,6 @@
       padding-left: 32px;
       font-weight: 400;
     }
-  }
-  .mobile-group .sub.is-open + .nothing {
   }
 
   .mobile-login a {
