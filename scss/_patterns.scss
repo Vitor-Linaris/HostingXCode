@@ -103,7 +103,7 @@
     flex: 1;
     padding: 2.4rem 3.2rem;
 
-    border-radius: 40px;
+    border-radius: 20px;
     box-shadow: 5px 12px 20.4px 0px rgba(0, 0, 0, 0.8);
     background-color: $neutral-colors-white;
     z-index: 4;
@@ -121,6 +121,10 @@
     .card-header {
       @include flex(column, center, flex-start);
       gap: 1.6rem;
+
+      h4 {
+        text-align: center;
+      }
 
       .price {
         display: flex;
@@ -166,7 +170,7 @@
 
           p {
             color: $neutral-colors-black;
-            font-weight: 500;
+            font-weight: 400;
           }
         }
       }
