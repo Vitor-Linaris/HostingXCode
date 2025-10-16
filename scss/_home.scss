@@ -510,16 +510,11 @@
   .container {
     position: relative;
     @include flex(row, center, space-between);
-    gap: 1.6rem;
-  }
-
-  .img-shared-hosting {
-    width: 100%;
-    max-width: 498px;
+    gap: 4.8rem;
   }
 
   .text-shared {
-    @include flex(column, center, center);
+    @include flex(column, flex-start, center);
     width: 100%;
     max-width: 72rem;
     gap: 2.4rem;
@@ -527,14 +522,14 @@
 
     .icon-text {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       gap: 8px;
+      margin-left: -32px;
     }
 
     h2 {
-      @include flex(column, center, center);
-      text-align: center;
+      @include flex(column, flex-start, center);
       color: $brand-dark-purple;
 
       &::after {
@@ -581,9 +576,10 @@
 
     .icon-text {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       gap: 8px;
+      margin-left: -32px;
     }
 
     h2 {
@@ -712,12 +708,12 @@
   .container {
     position: relative;
     @include flex(row, center, space-between);
-    gap: 2.4rem;
+    gap: 4.8rem;
   }
 
   .img-aws-hosting {
     width: 100%;
-    max-width: 498px;
+    max-width: 632px;
   }
 
   .text-aws {
@@ -729,9 +725,10 @@
 
     .icon-text {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       gap: 8px;
+      margin-left: -32px;
     }
 
     h2 {

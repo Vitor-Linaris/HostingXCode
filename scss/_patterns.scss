@@ -91,15 +91,16 @@
 .cards {
   width: 100%;
   margin-top: 8rem;
-  @include flex(row, flex-start, space-between);
+  @include flex(row, stretch, space-between);
   gap: 3.2rem;
   flex-wrap: wrap;
 
   .card {
-    width: 100%;
+    flex: 1 1 320px;
     max-width: 384px;
-    @include flex(column, center, center);
+    @include flex(column, center, flex-start);
     gap: 1.6rem;
+    flex: 1;
     padding: 2.4rem 3.2rem;
 
     border-radius: 40px;
