@@ -16,37 +16,105 @@
     <title>Xcloud - Hospedagem Wordpress</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <img src="./assets/svg/Main_Gradient.svg" alt="Logo Penta" />
-        </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/hosting.html">Hospedagem De Sites</a></li>
-            <li><a href="/wp-hosting.html">Hospedagem Wordpress</a></li>
-            <li>
-              <a href="/aws-hosting.html">Hospedagem Amazon Gerenciada</a>
-            </li>
-          </ul>
-        </nav>
-        <nav>
-          <input type="checkbox" id="hamburger1" />
-          <label for="hamburger1"></label>
-
-          <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/hosting.html">Hospedagem De Sites</a></li>
-            <li><a href="/wp-hosting.html">Hospedagem Wordpress</a></li>
-            <li><a href="/aws-hosting.html">Hospedagem Amazon Dedicada</a></li>
-          </ul>
-        </nav>
-        <a href="#" class="btn-sign">
-          <img src="./assets/svg/sign.svg" alt="Icone Sign" />
-          <span>Sign in</span>
+    <!-- TOP PROMO BAR -->
+    <div class="top-promo">
+      <div class="promo-container">
+        <p>
+          <strong>Hospedagem AWS gerenciada:</strong> alta performance e preço
+          reduzido!
+        </p>
+        <a href="/aws-hosting.html" class="promo-link">
+          Ver promoção <i class="ri-arrow-right-line"></i>
         </a>
       </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container">
+        <!-- ESQUERDA: LOGO -->
+        <a class="logo" href="/">
+          <img src="./assets/svg/Main_Gradient.svg" alt="Logo Penta" />
+        </a>
+
+        <!-- DIREITA: MENU + LOGIN -->
+        <div class="right-block">
+          <!-- Desktop / Tablet -->
+          <nav class="menu" aria-label="Principal">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about-us.html">Sobre Xcloud</a></li>
+
+              <!-- PRODUTOS com Mega -->
+              <li class="has-mega">
+                <button
+                  class="menu-trigger"
+                  aria-haspopup="true"
+                  aria-expanded="false">
+                  Produtos
+                  <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+                </button>
+
+                <!-- MEGA MENU -->
+                <div class="mega" role="menu" aria-label="Produtos">
+                  <a class="mega-item" href="/hosting.html" role="menuitem">
+                    <img src="./assets/svg/ic_server.svg" alt="" />
+                    <span>Hospedagem de Sites</span>
+                  </a>
+                  <a class="mega-item" href="/wp-hosting.html" role="menuitem">
+                    <img src="./assets/svg/ic-wordpress.svg" alt="" />
+                    <span>Hospedagem WordPress</span>
+                  </a>
+                  <a class="mega-item" href="/aws-hosting.html" role="menuitem">
+                    <img src="./assets/svg/aws.svg" alt="" />
+                    <span>Hospedagem Amazon</span>
+                  </a>
+                </div>
+              </li>
+
+              <li><a href="/contact.html">Contato</a></li>
+            </ul>
+          </nav>
+
+          <!-- Sign in (fica à direita) -->
+          <a href="/login" class="btn-sign">
+            <img src="./assets/svg/sign.svg" alt="Icone Sign" />
+            <span>Sign in</span>
+          </a>
+
+          <!-- Botão Mobile -->
+          <button
+            class="hamb-btn"
+            id="hambBtn"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="mobileNav">
+            <i class="ri-menu-line"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MENU MOBILE (REMOVIDO o atributo hidden) -->
+      <nav id="mobileNav" class="nav-mobile" aria-label="Navegação móvel">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us.html">Sobre nós</a></li>
+
+          <li class="mobile-group">
+            <button class="sub-trigger" aria-expanded="false">
+              Produtos <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <ul class="sub">
+              <li><a href="/hosting.html">Hospedagem de Sites</a></li>
+              <li><a href="/wp-hosting.html">Hospedagem WordPress</a></li>
+              <li><a href="/aws-hosting.html">Hospedagem Amazon</a></li>
+            </ul>
+          </li>
+
+          <li class="mobile-login">
+            <a href="/login"><i class="ri-user-line"></i> Sign in</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- <section class="s-social">
