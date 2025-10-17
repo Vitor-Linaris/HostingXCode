@@ -91,16 +91,15 @@
 .cards {
   width: 100%;
   margin-top: 8rem;
-  @include flex(row, stretch, space-between);
+  @include flex(row, stretch, center);
   gap: 3.2rem;
   flex-wrap: wrap;
 
   .card {
     flex: 1 1 320px;
     max-width: 384px;
-    @include flex(column, center, flex-start);
-    gap: 1.6rem;
-    flex: 1;
+    @include flex(column, center, space-between);
+    gap: 3.2rem;
     padding: 2.4rem 3.2rem;
 
     border-radius: 20px;
@@ -178,9 +177,13 @@
     }
 
     .btn-primary {
+      width: 100%;
       margin-top: 1.6rem;
     }
   }
+}
+
+@include responsive(1024px) {
 }
 
 @include responsive(768px) {

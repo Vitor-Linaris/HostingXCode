@@ -185,8 +185,8 @@
 
   .h-disc-purple-sm {
     position: absolute;
-    top: 20px;
-    left: 38%;
+    top: -23px;
+    left: 42%;
     z-index: -1;
   }
 
@@ -518,6 +518,10 @@
     gap: 4.8rem;
   }
 
+  .img-shared-hosting {
+    width: 100%;
+  }
+
   .text-shared {
     @include flex(column, flex-start, center);
     width: 100%;
@@ -548,9 +552,6 @@
     }
 
     p {
-      width: 100%;
-      max-width: 68rem;
-
       font-size: 18px;
       color: $gray-400;
     }
@@ -560,6 +561,22 @@
     .container {
       @include flex(column, center, space-between);
       gap: 4rem;
+    }
+
+    .text-shared {
+      max-width: 82.4rem;
+    }
+  }
+
+  @include responsive(768px) {
+    .text-shared {
+      .icon-text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 8px;
+        margin-left: -0px;
+      }
     }
   }
 }
@@ -575,7 +592,6 @@
   .text-wp {
     @include flex(column, flex-start, center);
     width: 100%;
-    max-width: 60rem;
     gap: 2.4rem;
     flex-wrap: wrap;
 
@@ -637,6 +653,11 @@
     }
   }
 
+  .img-wp-hosting-1 {
+    width: 100%;
+    max-width: 60rem;
+  }
+
   @include responsive(1024px) {
     .container {
       @include flex(column-reverse, center, space-between);
@@ -645,6 +666,8 @@
 
     .text-wp {
       @include flex(column, flex-start, center);
+      width: 100%;
+      max-width: 82.4rem;
 
       h2 {
         @include flex(column, flex-start, center);
