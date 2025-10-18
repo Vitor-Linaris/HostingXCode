@@ -564,6 +564,7 @@
     }
 
     .text-shared {
+      @include flex(column, center, center);
       max-width: 82.4rem;
     }
   }
@@ -575,7 +576,7 @@
         align-items: flex-start;
         justify-content: center;
         gap: 8px;
-        margin-left: -0px;
+        margin-left: 0px;
       }
     }
   }
@@ -621,7 +622,6 @@
 
     p {
       width: 100%;
-      max-width: 65rem;
       font-size: 18px;
       font-weight: $gray-600;
       color: $neutral-colors-black;
@@ -629,15 +629,15 @@
 
     .wp-bullets {
       @include flex(column, flex-start, center);
-      gap: 1rem;
+      gap: 0.8rem;
 
       li {
         @include flex(row, flex-start, center);
         gap: 0.8rem;
         p {
-          font-size: 1.8rem;
-          color: $gray-300;
-          font-weight: 500;
+          font-size: 1.6rem;
+          color: $gray-400;
+          font-weight: 400;
         }
 
         &::before {
@@ -664,8 +664,12 @@
       gap: 4rem;
     }
 
+    .img-wp-hosting-1 {
+      max-width: 90rem;
+    }
+
     .text-wp {
-      @include flex(column, flex-start, center);
+      @include flex(column, center, center);
       width: 100%;
       max-width: 82.4rem;
 
@@ -688,7 +692,6 @@
         gap: 1rem;
 
         li {
-          width: 90%;
           @include flex(row, flex-start, center);
           gap: 0.8rem;
           p {
@@ -721,7 +724,7 @@
 
   .img-aws-hosting {
     width: 100%;
-    max-width: 650px;
+    max-width: 58rem;
   }
 
   .text-aws {
@@ -786,17 +789,21 @@
     }
   }
 
-  @include responsive(768px) {
+  @include responsive(1024px) {
     .container {
       @include flex(column, center, space-between);
+    }
+
+    .img-aws-hosting {
+      width: 100%;
+      max-width: 80rem;
     }
 
     .text-aws {
       @include flex(column, center, center);
 
       h2 {
-        @include flex(column, center, center);
-        text-align: center;
+        @include flex(column, flex-start, center);
 
         &::after {
           content: "";
@@ -809,10 +816,6 @@
       }
 
       p {
-        text-align: center;
-        width: 100%;
-        max-width: 60rem;
-        font-size: 24px;
         color: $gray-300;
       }
 
@@ -822,6 +825,14 @@
             text-align: start;
           }
         }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .text-aws {
+      .icon-text {
+        margin-left: 0px;
       }
     }
   }
