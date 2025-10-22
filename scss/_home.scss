@@ -643,11 +643,11 @@
         &::before {
           content: "";
           display: inline-block;
-          width: 10px;
-          height: 10px;
+          width: 8px;
+          height: 8px;
           border-radius: 50px;
           background-color: $brand-purple;
-          margin-top: 4px;
+          margin-top: 6px;
         }
       }
     }
@@ -779,11 +779,11 @@
         &::before {
           content: "";
           display: inline-block;
-          width: 10px;
-          height: 10px;
+          width: 8px;
+          height: 8px;
           border-radius: 50px;
           background-color: $brand-purple;
-          margin-top: 4px;
+          margin-top: 8px;
         }
       }
     }
@@ -891,11 +891,11 @@
         &::before {
           content: "";
           display: inline-block;
-          width: 10px;
-          height: 10px;
+          width: 8px;
+          height: 8px;
           border-radius: 50px;
           background-color: $brand-purple;
-          margin-top: 4px;
+          margin-top: 8px;
         }
       }
     }
@@ -903,16 +903,10 @@
 
   .img-marketing {
     width: 100%;
-    max-width: 648px;
+    max-width: 54rem;
   }
 
   @include responsive(1024px) {
-    .img-marketing {
-      max-width: 530px;
-    }
-  }
-
-  @include responsive(768px) {
     .container {
       @include flex(column-reverse, center, space-between);
       gap: 4rem;
