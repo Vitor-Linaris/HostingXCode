@@ -21,7 +21,7 @@
   }
 
   .cards {
-    @include flex(row, center, center);
+    @include flex(row, stretch, center);
   }
 
   .text-price-hero {
@@ -37,6 +37,8 @@
         gap: 0.8rem;
 
         p {
+          color: $neutral-colors-black;
+          opacity: 0.8;
           font-size: 1.8rem;
         }
       }
