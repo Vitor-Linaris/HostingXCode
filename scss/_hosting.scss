@@ -52,7 +52,7 @@
   }
 }
 
-.s-security {
+.s-security-hosting {
   padding: 8rem 0;
   .container {
     position: relative;
@@ -62,13 +62,12 @@
 
   .img-security-hosting {
     width: 100%;
-    max-width: 524px;
+    max-width: 580px;
   }
 
   .text-security {
     @include flex(column, flex-start, center);
     width: 100%;
-    max-width: 60rem;
     gap: 2.4rem;
     flex-wrap: wrap;
 
@@ -88,8 +87,7 @@
 
     p {
       width: 100%;
-      max-width: 60rem;
-      font-size: 24px;
+      font-size: 18px;
       color: $gray-300;
     }
 
@@ -102,7 +100,7 @@
         @include flex(row, flex-start, flex-start);
         gap: 0.8rem;
         p {
-          font-size: 1.8rem;
+          font-size: 1.6rem;
           color: $gray-300;
           font-weight: 500;
         }
@@ -110,11 +108,11 @@
         &::before {
           content: "";
           display: inline-block;
-          width: 10px;
-          height: 10px;
+          width: 8px;
+          height: 8px;
           border-radius: 50px;
           background-color: $brand-purple;
-          margin-top: 4px;
+          margin-top: 6px;
         }
       }
     }
