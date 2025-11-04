@@ -61,8 +61,12 @@
   }
 
   .img-security-hosting {
-    width: 100%;
-    max-width: 580px;
+    border-radius: 16px;
+    box-shadow: 100px 81px 36px 0 rgba(111, 103, 212, 0),
+      64px 52px 33px 0 rgba(111, 103, 212, 0.02),
+      36px 29px 28px 0 rgba(111, 103, 212, 0.08),
+      16px 13px 21px 0 rgba(111, 103, 212, 0.13),
+      4px 3px 11px 0 rgba(111, 103, 212, 0.15);
   }
 
   .text-security {
